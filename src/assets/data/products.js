@@ -27,6 +27,8 @@ import productImg23 from "../pictures/sopure-toilet-cleaner.webp";
 import productImg24 from "../pictures/yes-mop-broom.jpeg";
 import productImg25 from "../pictures/smart-mop-broom.jpeg";
 import productImg26 from "../pictures/duck-toilet-block.jpeg";
+import productImg027 from "../pictures/maq-dishwashing.jpeg";
+import productImg28 from "../pictures/first-value-dishwashing-liquid.jpeg";
 
 const products = [
   {
@@ -53,6 +55,44 @@ const products = [
     imgUrl: productImg26,
     category: "toilet",
     price: 40,
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+    reviews: [
+      {
+        rating: 4.7,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+    ],
+    avgRating: 4.5,
+  },
+
+  {
+    id: "027",
+    productName: "Maq Dishwashing Liquid",
+    imgUrl: productImg027,
+    category: "dishwashing",
+    price: 34,
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+    reviews: [
+      {
+        rating: 4.7,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+    ],
+    avgRating: 4.5,
+  },
+
+  {
+    id: "28",
+    productName: "First Value Dishwashing Liquid",
+    imgUrl: productImg28,
+    category: "dishwashing",
+    price: 34,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:

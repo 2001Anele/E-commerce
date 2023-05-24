@@ -78,7 +78,7 @@ const Home = () => {
                     <Col lg="6" md="6">
                         <div className="clock__top-content">
                             <h4 className="text-white fs-6 mb=2">Limited Offers</h4>
-                            <h3 className="text-white fs-5 mb=3">Quality Supplies</h3>
+                            <h3 className="text-white fs-5 mb=3">Quality Bleach</h3>
                         </div>
                         <Clock/>
                         <motion.button whileTap={{scale:1.2}} className="buy__btn store__btn">
@@ -92,6 +92,9 @@ const Home = () => {
 
                 </Row>
             </Container>
+        </section>
+        <section className="new__arrivals">
+            
         </section>
     </Helmet>
     );

@@ -15,6 +15,8 @@ const Home = () => {
 
     const [trendingProducts, setTrendingProducts] = useState([]);
     const [bestSellingProducts, setBestSellingProducts] = useState([]);
+    const [toiletBlockProducts, setToiletBlockProducts] = useState([]);
+    const [broomsProducts, setBroomsProducts] = useState([]);
     const year = new Date().getFullYear();
 
     useEffect(()=>{
@@ -24,8 +26,16 @@ const Home = () => {
         const filterdBestSellingProducts = products.filter(
             (item) => item.category ==='bathroom');
 
+        const filterdToiletBlockProducts = products.filter(
+                (item) => item.category ==='toilet');
+        
+        const filterdBroomsProducts = products.filter(
+                (item) => item.category ==='brooms');
+
         setTrendingProducts(filterdTrendingProducts);
         setBestSellingProducts(filterdBestSellingProducts);
+        setToiletBlockProducts(filterdToiletBlockProducts);
+        setBroomsProducts(filterdBroomsProducts);
     }, []);
     return (
     <Helmet title={"Home"}>
@@ -94,7 +104,15 @@ const Home = () => {
             </Container>
         </section>
         <section className="new__arrivals">
-            
+            <Container>
+                <Row>
+                <Col lg="12" className="text-center">
+                        <h2 className="section__title">New Arrivals</h2>
+                    </Col>
+                    <ProductList data={toiletBlockProducts} />
+                    <ProductList data={broomsProducts} />
+                </Row>
+            </Container>
         </section>
     </Helmet>
     );

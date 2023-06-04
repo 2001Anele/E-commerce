@@ -19,7 +19,48 @@ const Shop = () => {
 
             setProductsData(filteredProducts);
         }
+
+        if(filterValue==="bathroom") {
+            const filteredProducts = products.filter(
+                (item) => item.category === "bathroom"
+            );
+
+            setProductsData(filteredProducts);
+        }
+
+        if(filterValue==="toilet") {
+            const filteredProducts = products.filter(
+                (item) => item.category === "toilet"
+            );
+
+            setProductsData(filteredProducts);
+        }
+
+        if(filterValue==="dishwashing") {
+            const filteredProducts = products.filter(
+                (item) => item.category === "dishwashing"
+            );
+
+            setProductsData(filteredProducts);
+        }
+
+        if(filterValue==="brooms") {
+            const filteredProducts = products.filter(
+                (item) => item.category === "brooms"
+            );
+
+            setProductsData(filteredProducts);
+        }
     };
+
+    const handleSearch = e=>{
+        const searchTerm = e.target.value
+
+        const searchedProducts = products.filter(item=> item.productName.
+            toLowerCase().includes(searchTerm.toLowerCase()))
+
+            setProductsData(searchedProducts)
+    }
     return (
     <Helmet title='Shop'>
         <CommonSection title='Products'/>
@@ -35,7 +76,7 @@ const Shop = () => {
                                 <option value="bathroom">Toilet Cleaners</option>
                                 <option value="toilet">Toilet Block</option>
                                 <option value="dishwashing">Dishwashing Liquid</option>
-                                <option value="brooms">Brooms & Dustmane</option>
+                                <option value="brooms">Brooms & Dustpans</option>
                             </select>
                         </div>
                     </Col>
@@ -50,7 +91,7 @@ const Shop = () => {
                     </Col>
                     <Col lg='6' md='6'>
                         <div className="search__box">
-                            <input type="text"  placeholder="Search....."/>
+                            <input type="text"  placeholder="Search....." onChange={handleSearch}/>
                             <span>
                                 <i class="ri-search-line"></i>
                             </span>
@@ -60,12 +101,12 @@ const Shop = () => {
             </Container>
         </section>
 
-        <section>
+        <section className='pt-0'>
             <Container>
                 <Row>
                     {
                         productsData.length === 0? (
-                        <h1>No products are found!</h1>
+                        <h1 className='text-center fs-4'>No products are found!</h1>
                         )
                         :
                         (
